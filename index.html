@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>শুভ জন্মদিন দিদি! 💖</title>
+    <style>
+        /* বেসিক স্টাইল ও ব্যাকগ্রাউন্ড */
+        body { margin: 0; padding: 0; background: linear-gradient(135deg, #ff9a9e, #fad0c4); font-family: 'Georgia', serif; text-align: center; overflow-x: hidden; color: #333; }
+        
+        /* বেলুন অ্যানিমেশন (নিচ থেকে ওপরে উঠবে) */
+        .balloon { width: 50px; height: 60px; border-radius: 50%; position: absolute; bottom: -100px; animation: rise 6s infinite linear; opacity: 0.8; }
+        .balloon::after { content: ''; position: absolute; bottom: -10px; left: 20px; width: 2px; height: 20px; background-color: #ccc; }
+        
+        @keyframes rise { 0% { transform: translateY(0) rotate(0deg); } 100% { transform: translateY(-100vh) rotate(10deg); } }
+
+        /* মেইন কন্টেইনার */
+        .main-container { position: relative; z-index: 10; padding-top: 10vh; min-height: 100vh; display: flex; flex-direction: column; align-items: center; }
+
+        /* গোল্ডেন উইশিং কার্ড (পরে ভেসে উঠবে) */
+        .wishing-card { background: linear-gradient(45deg, #FFD700, #FFFACD); border: 3px solid #B8860B; padding: 30px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.3); animation: slideInUp 1s ease-out forwards; opacity: 0; max-width: 80%; margin-bottom: 50px; }
+        
+        @keyframes slideInUp { 0% { transform: translateY(100px); opacity: 0; } 100% { transform: translateY(0); opacity: 1; } }
+        
+        .wishing-card h1 { font-size: 4rem; color: #8B4513; margin: 0 0 10px; text-shadow: 2px 2px 4px rgba(0,0,0,0.2); }
+        .wishing-card p { font-size: 1.8rem; color: #556B2F; line-height: 1.6; }
+        .wishing-card .heart { color: #FF4500; font-size: 3rem; animation: beat 1s infinite; display: inline-block; }
+
+        /* ছবির গ্যালারি লেআউট */
+        .photo-gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; width: 80%; max-width: 1000px; padding-bottom: 50px; }
+        .photo-item { background: #fff; padding: 10px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.2); transform: rotate(0deg); transition: transform 0.3s ease; }
+        .photo-item:hover { transform: scale(1.05) rotate(2deg); }
+        .photo-item img { width: 100%; height: auto; border-radius: 8px; display: block; }
+        .photo-item p { font-size: 1.2rem; margin: 10px 0 0; color: #777; font-style: italic; }
+
+        @keyframes beat { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.2); } }
+
+        /* রেসপন্সিভ */
+        @media (max-width: 600px) { .wishing-card h1 { font-size: 2.5rem; } .wishing-card p { font-size: 1.2rem; } }
+    </style>
+</head>
+<body>
+
+    <!-- বেলুনগুলো এখানে তৈরি হবে (JavaScript দিয়ে) -->
+    <div id="balloon-container"></div>
+
+    <div class="main-container">
+        <!-- গোল্ডেন উইশিং কার্ড -->
+        <div class="wishing-card">
+            <h1>শুভ জন্মদিন দিদি! <div class="heart">❤</div></h1>
+            <p>প্রিয় দিদিভাই,</p>
+            <p>আজকের দিনটা তোমার জন্য অনেক অনেক আনন্দময় হোক। তুমি আমার অনুপ্রেরণা ও সবচেয়ে কাছের বন্ধু। তোমার সব স্বপ্ন পূরণ হোক। অনেক ভালোবাসা নিও!</p>
+            <p style="font-size: 1.5rem; margin-top: 20px;">– তোমার স্নেহের অনুদিপ</p>
+        </div>
+
+        <!-- ছবির গ্যালারি লেআউট -->
+        <h2>আমার দিদির সুন্দর মুহূর্তগুলো</h2>
+        <div class="photo-gallery">
+            
+            <!-- ছবি ১: এখানে তোমার ছবির লিংক বসাও -->
+            <div class="photo-item">
+                <img src="image1.jpg" alt="আমার দিদি" onerror="this.style.display='none'">
+                <p>ছোটবেলার ধামাকা!</p>
+            </div>
+            
+            <!-- ছবি ২: এখানে তোমার ছবির লিংক বসাও -->
+            <div class="photo-item">
+                <img src="image2.jpg" alt="আমার দিদি" onerror="this.style.display='none'">
+                <p>সবসময় পাশে থাকার জন্য ধন্যবাদ。</p>
+            </div>
+
+            <!-- ছবি ৩: এখানে তোমার ছবির লিংক বসাও -->
+            <div class="photo-item">
+                <img src="image3.jpg" alt="আমার দিদি" onerror="this.style.display='none'">
+                <p>কত মজার স্মৃতি!</p>
+            </div>
+
+            <!-- ছবি ৪: এখানে তোমার ছবির লিংক বসাও -->
+            <div class="photo-item">
+                <img src="image4.jpg" alt="আমার দিদি" onerror="this.style.display='none'">
+                <p>আমার মেন্টর!</p>
+            </div>
+
+            <!-- আরো ছবি চাইলে এই ব্লকগুলো কপি করে পেস্ট কর -->
+            <div class="photo-item">
+                <img src="image5.jpg" alt="আমার দিদি" onerror="this.style.display='none'">
+            </div>
+            <div class="photo-item">
+                <img src="image6.jpg" alt="আমার দিদি" onerror="this.style.display='none'">
+            </div>
+
+        </div>
+    </div>
+
+    <!-- বেলুন অ্যানিমেশনের জন্য জাভাস্ক্রিপ্ট -->
+    <script>
+        function createBalloons() {
+            const container = document.getElementById('balloon-container');
+            const colors = ['#FF69B4', '#00BFFF', '#FFD700', '#7B68EE', '#32CD32'];
+            
+            for (let i = 0; i < 15; i++) { // ১৫টা বেলুন
+                const balloon = document.createElement('div');
+                balloon.className = 'balloon';
+                balloon.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+                balloon.style.left = Math.random() * 100 + 'vw';
+                balloon.style.animationDuration = (Math.random() * 4 + 4) + 's'; // ৪ থেকে ৮ সেকেন্ডের মধ্যে উঠবে
+                balloon.style.animationDelay = Math.random() * 5 + 's'; // ৫ সেকেন্ডের মধ্যে শুরু হবে
+                container.appendChild(balloon);
+            }
+        }
+        createBalloons();
+    </script>
+</body>
+</html>
